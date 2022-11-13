@@ -2,44 +2,81 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     font-weight: 400;
     font-size: 16px;
     line-height: 19.2px;
     align-self: center;
-    padding: 2rem;
+    margin: 2rem;
 }
 
 .nav-list{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
+    height: 100%;
     gap: 3rem ;
-    position: relative;
     color: black;
+}
+
+.nav-list a{
+    display: inline-block;
+    width: auto ;
+    position:relative;
 }
 
 .nav-list a:hover,
 .nav-list a:active{
     color: #5ECE7B;
     cursor: pointer;
-    font-size: 16px;
-    
+    font-size: 16px;    
 }
 
-/* .nav-list li:hover:after,
-.nav-list li:active:after{
+.nav-list a::after,
+.nav-list a::after{
     content: '';
-    position: absolute;
+    transform: scaleX(0);
     height: 2px;
     bottom: -200%;
     left: 0;
     background: #5ECE7B;
-    width: 16px;
+    width: 100%;
+    position: absolute;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+   
 
-} */
+
+.nav-list a:hover::after,
+.nav-list a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
 
 .header-icon-list{
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
+
+.currency-icon,
+.cart-icon{ 
+    font-size: 18px;
+    position: relative;
+}
+
+.cart-pop-up{
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: white;
+    font-weight: bold;
+    background: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 3px;
+}
+

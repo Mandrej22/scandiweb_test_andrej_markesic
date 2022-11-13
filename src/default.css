@@ -35,6 +35,7 @@ a{
 }
 a:visited {
     text-decoration: none;
+    color: black;
 }
 blockquote, q {
 	quotes: none;
@@ -51,6 +52,17 @@ table {
 
 
 *{
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
 
+}
+
+.app{
+	height: 100%;
+    max-width: 1440px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.main{
+	
 }
